@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +11,11 @@ namespace MT_Superfolio.ViewComponents.Contact
 {
     public class SendMessage:ViewComponent
     {
+
         public IViewComponentResult Invoke()
         {
             return View();
         }
+
     }
 }
