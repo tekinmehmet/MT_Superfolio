@@ -6,15 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MT_Superfolio.ViewComponents.Feature
+namespace MT_Superfolio.ViewComponents.Service
 {
-    
-    public class FeatureList:ViewComponent
+    public class ServiceList:ViewComponent
     {
-        FeatureManager featureManager = new FeatureManager(new EfFeatureDal());
+        ServiceManager serviceManager = new ServiceManager(new EfServiceDal());
         public IViewComponentResult Invoke()
         {
-            var values = featureManager.TGetList();
+            var values = serviceManager.TGetList();
             return View(values);
         }
     }
